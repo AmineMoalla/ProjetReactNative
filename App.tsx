@@ -13,8 +13,15 @@ import {
 } from 'react-native-safe-area-context';
 import AppTemplate from './src/templates/AppTemplate';
 import Login from './src/screens/Login';
-
+import { useEffect } from 'react';
+import bootSplash from 'react-native-bootsplash';
 function App() {
+
+
+useEffect(() => {
+bootSplash.hide({ fade: true });
+}, []);
+
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
